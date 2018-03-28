@@ -1,0 +1,25 @@
+{
+  "name": "demo",
+  "version": "1.0.1",
+  "description": "xx系统",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "node ./server/serverCreateLogDir.js",
+    "start": "node --harmony server.js"
+  },
+  "dependencies": {
+    "koa": "2.3.0",
+    "koa-body": "2.5.0",
+    "lodash": "4.17.4",
+    "koa-router": "7.2.1",
+    "log4js": "2.3.7",
+    "querystring": "0.2.0",
+    "url": "0.11.0"
+  },
+  "config": {
+    "port": "10300"
+  },
+  "author": "XX",
+  "license": "ISC"
+}
