@@ -1,7 +1,7 @@
 {
   "name": "demo",
-  "version": "1.0.1",
-  "description": "xx系统",
+  "version": "1.0.0",
+  "description": "NodeJs demo",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,8 +18,8 @@
     "url": "0.11.0"
   },
   "config": {
-    "port": "10300"
+    "port": "10000"
   },
-  "author": "XX",
+  "author": "NodeJS",
   "license": "ISC"
 }

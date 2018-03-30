@@ -40,20 +40,15 @@ module.exports = {
         return
     },
     postMultiplicationTable: function (ctx) {
-
-        let map = {
-            status: "OK",
-            data: {
-                "result": result
-            }
-        }
-        res.sendObject(ctx, map, 200)
+        let num = ctx.request.body['num']
+        let result = multiplicationTable(8)
+        log.warn(result)
+        res.send(ctx, result, 200)
         return
     }
 }
 
 function quickSort(nums) {
-    // log.warn(nums)
     if (!nums || nums.length < 1) {
         return nums
     }
@@ -68,9 +63,6 @@ function quickSort(nums) {
             leftHand.push(nums[i])
         }
     }
-    // log.info('left' + leftHand)
-    // log.info('right' + rightHand)
-
     return quickSort(leftHand).concat(pivot).concat(quickSort(rightHand))
 }
 
@@ -81,4 +73,23 @@ function factorial(num) {
     else {
         return num * factorial(num - 1)
     }
+}
+
+function multiplicationTable(num) {
+    if (!num || num < 1) {
+        return num
+    }
+    let htmlMultiple = '*'
+    let htmlEqual = '='
+    let htmlTab = '\t'
+    let result = ''
+    let multiplier = 1  //乘数
+    while (multiplier <= num) {
+        for (let multiplicand = 1; multiplicand <= multiplier; multiplicand += 1) {
+            result += multiplicand + htmlMultiple + multiplier + htmlEqual + multiplicand * multiplier + htmlTab
+        }
+        result += '\n'
+        multiplier = multiplier + 1
+    }
+    return result
 }

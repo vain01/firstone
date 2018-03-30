@@ -47,5 +47,5 @@ function errorResp(ctx, err) {
     res.sendObject(ctx, map, 400)
 }
 
-app.listen(process.env.npm_package_config_port || 10300);
-log.info('Server started on ' + (process.env.npm_package_config_port || 10300))
+app.listen(process.env.npm_package_config_port || 10000);
+log.info('Server started on ' + (process.env.npm_package_config_port || 10000))
