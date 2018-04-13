@@ -4,6 +4,7 @@ let options = {
     hostname: "127.0.0.1",
     port: 80,
     path: '/',
+    method: 'GET',
     headers: {}
 }
 
